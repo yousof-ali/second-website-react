@@ -20,16 +20,16 @@ const Navbar = () => {
     }  
 
     return (
-        <nav>
+        <nav className="bg-slate-400 text-white py-4">
             <div className="md:hidden text-2xl" onClick={togFun}>
                 {
-                   tog === true ? <RxCross2 /> : <CiMenuFries />
+                tog === true ? <RxCross2 /> : <CiMenuFries />
                 }
                 
             </div>
-            <ul className={`md:flex  absolute bg-slate-400 text-white ${tog ? '' : "hidden"} `}>
+            <ul className={`md:flex md:static bg-slate-400 text-white  absolute duration-1000 ${tog ? '' : "hidden"} `}>
             {
-               routes.map(route=><Link key={route.id} route={route}></Link>)
+            routes.map(route=><Link key={route.id} route={route}></Link>)
             }
             </ul>
         </nav>
