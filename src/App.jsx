@@ -9,8 +9,7 @@ function App() {
   return (
     <>  
       {/* <Nav></Nav>   */}
-      <Navbar></Navbar>
-      <h1 className='text-4xl'>Vite + React</h1>     
+      <Navbar></Navbar>  
     </>
   )
 }

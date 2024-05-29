@@ -1,4 +1,7 @@
+import { CiMenuFries } from "react-icons/ci";
 import Link from "../link/Link";
+import { useState } from "react";
+import { RxCross2 } from "react-icons/rx";
 
 
 const Navbar = () => {
@@ -11,9 +14,20 @@ const Navbar = () => {
         { id: 5, path: '*', name: 'NotFound' }
       ];
 
+    const [tog,setTog]=useState(false)
+    const  togFun =() =>{
+        setTog(!tog)
+    }  
+
     return (
         <nav>
-            <ul className="md:flex">
+            <div className="md:hidden text-2xl" onClick={togFun}>
+                {
+                   tog === true ? <RxCross2 /> : <CiMenuFries />
+                }
+                
+            </div>
+            <ul className={`md:flex  absolute bg-slate-400 text-white ${tog ? '' : "hidden"} `}>
             {
                routes.map(route=><Link key={route.id} route={route}></Link>)
             }
