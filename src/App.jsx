@@ -1,13 +1,16 @@
 
 import './App.css'
+import Navbar from './component/NabBar/Navbar'
+// import Nav from './component/daisyNav/Nav'
 
 function App() {
 
 
   return (
-    <>     
-      <h1 className='text-4xl'>Vite + React</h1>  
-        
+    <>  
+      {/* <Nav></Nav>   */}
+      <Navbar></Navbar>
+      <h1 className='text-4xl'>Vite + React</h1>     
     </>
   )
 }
